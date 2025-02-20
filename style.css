@@ -1,0 +1,513 @@
+body {
+  transition: background 0.3s ease-in-out;
+  background-image: linear-gradient(231deg, #8BC6EC 0%, #9599E2 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.main-content {
+  background-image: linear-gradient(231deg, #8BC6EC 0%, #9599E2 100%);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+.login-btn {
+  background-color: #007BFF; /* Blue */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.login-btn:hover {
+  background-color: #0056b3; /* Darker blue */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.login-btn:active {
+  background-color: #00408a; /* Even darker blue */
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+  transform: scale(0.98);
+}
+
+.login-btn:focus {
+  outline: 3px solid rgba(0, 123, 255, 0.5);
+  outline-offset: 2px;
+}
+
+
+
+
+.completed {
+  text-decoration: line-through;
+  color:black;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+
+.list-group-item {
+  transition: background 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background: #f8f9fa;
+}
+
+.profile-logout-div {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+#login-btn{
+  position: absolute;
+  top: 20px;
+  right: 70px;
+}
+
+#logout-btn {
+  margin: 10px;
+  background-color: rgba(239, 14, 14, 0.874);
+  color: white;
+}
+
+.rounded-circle {
+  width: 50px;
+  height: 50px;
+}
+
+/* Style the message modal */
+.msg-modal {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  z-index: 9999;
+}
+
+/* Fade-in/out animation for message modal */
+.msg-modal.fade {
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+
+/* modal */
+/* Add this CSS */
+.modal {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent background */
+  /* backdrop-filter: blur(5px); Apply blur effect */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main-content {
+  height: 100%;
+}
+
+
+
+/* Show Bootstrap Modal with CSS */
+#profileModal {
+  display: block;
+  /* Show the modal */
+  opacity: 1;
+  /* Make it fully visible */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional: Dim background */
+  pointer-events: auto;
+}
+
+/* Add Bootstrap show classes */
+#profileModal .modal-dialog {
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-out;
+}
+
+#profileModal .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Profile Modal Styling */
+#profileModal .modal-content {
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+#profileModal .modal-header {
+  background-color: #4a90e2;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 15px;
+}
+
+#profileModal .modal-body {
+  text-align: center;
+  /* padding: 20px; */
+  font-family: 'Arial', sans-serif;
+}
+
+#profileModal img#modal-profile-pic {
+  border: 3px solid #4a90e2;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+#profileModal img#modal-profile-pic:hover {
+  transform: scale(1.1);
+}
+
+#profileModal p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+#profileModal strong {
+  color: #555;
+  font-weight: 600;
+}
+
+#profileModal .btn-close {
+  filter: brightness(0) invert(1);
+  transition: all 0.2s;
+}
+
+#profileModal .btn-close:hover {
+  transform: rotate(90deg);
+  opacity: 0.8;
+}
+
+
+
+
+/* Style for Task List Items */
+.list-group-item {
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #f0f8ff;
+}
+
+/* Task Text */
+.task-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+  /* Limit text length */
+}
+
+/* Completed Task Styling */
+.task-text.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Date */
+.task-date {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* Buttons Styling */
+.btn-sm {
+  font-size: 12px;
+  padding: 4px 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+}
+
+.btn-danger:hover {
+  background-color: #dc3545;
+}
+
+
+
+
+
+
+/* Consistent Widths for Columns */
+.task-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 65%;
+  /* Prevents text from pushing date */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-date {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  text-align: left;
+  /* Ensures date aligns left */
+}
+
+
+.todoTitle {
+  position: absolute;
+  top: 20px;
+  /* Adjust as needed */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  /* Centering adjustment */
+  text-align: center;
+  font-size: 2rem;
+  /* Increase font size */
+  font-weight: bold;
+  /* Make the title bold */
+  color: #333;
+  /* Dark color for better contrast */
+  border-radius: 5px;
+  /* Rounded corners */
+  /* z-index: 10; Ensure it appears above other elements */
+}
+
+
+.todoTitle svg {
+  width: 40px;
+  height: 40px;
+  fill: #6ef514;
+  vertical-align: middle;
+  /* Align the icon with the text */
+  margin-left: 10px;
+  /* Space between text and icon */
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .todoTitle {
+    font-size: 32px;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+  .text-center {
+   font-size:19px ;
+  }
+  .todoTitle svg {
+    width: 20%;
+  }
+  #login-btn{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    font-size: smaller;
+  }
+  #login-btn button{
+    font-size: smaller;
+    padding: 10px 20px;
+  }
+}
+
+
+/* Dark Theme Styles */
+.dark-theme .theme {
+  background-image: none;
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+
+.dark-theme .bg-white {
+  background-color: #333 !important;
+}
+
+.dark-theme .btn-primary {
+  background-color: #007bff !important;
+  border-color: #0056b3 !important;
+}
+
+.dark-theme .btn-primary:hover {
+  background-color: #0056b3 !important;
+}
+
+.dark-theme .modal-content {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+.dark-theme .list-group-item {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.dark-theme .input-group input {
+  background-color: #555 !important;
+  color: #fff !important;
+  border: 1px solid #777 !important;
+}
+.dark-theme .task-text {
+  color: #fff;
+}
+
+
+.check{
+  background-color: #007bff;  
+  color: black;
+  border-color:#007bff;
+}
