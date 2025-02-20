@@ -29,7 +29,7 @@ document.querySelector(".logout-btn").addEventListener("click", async () => {
     redirectCheck();
     await signOut(auth);
     localStorage.removeItem("todo-uid");
-    window.location.replace('./Form/form.html');
+    window.location.replace('./index.html');
   } catch (error) {
     alert(error.message);
   }
