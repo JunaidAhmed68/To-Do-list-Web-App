@@ -29,7 +29,7 @@ document.querySelector(".logout-btn").addEventListener("click", async () => {
     redirectCheck();
     await signOut(auth);
     localStorage.removeItem("todo-uid");
-    window.location.replace('./index.html');
+    window.location.replace('./Form/form.html');
   } catch (error) {
     alert(error.message);
   }
@@ -288,7 +288,7 @@ const markAsDone = async (e, taskId, currentStatus) => {
           }
     
           let li = document.createElement("li");
-          li.className = "list-group-item d-flex justify-content-between align-items-center";
+          li.className = "list-group-item d-flex justify-content-between align-items-center cen-div";
           const taskText = taskData.text.slice(0, 20) + "..."; 
           
           li.innerHTML = `
@@ -369,6 +369,13 @@ const markAsDone = async (e, taskId, currentStatus) => {
           }
           closeDeleteModal(); // Close the modal after deletion
         });
+
+      document.querySelector("#closeDeleteModal").addEventListener("click", () => {
+        closeDeleteModal();
+      });
+      document.querySelector("#cancelDeleteBtn").addEventListener("click", () => {
+        closeDeleteModal();
+      });
         
         
         // Event listener for profile picture click

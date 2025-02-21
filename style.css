@@ -1,6 +1,6 @@
 body {
   transition: background 0.3s ease-in-out;
-  background-image: linear-gradient(231deg, #8BC6EC 0%, #9599E2 100%);
+  background-image: linear-gradient(231deg, #E3F2FD 0%, #FFFFFF 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 }
 
 .main-content {
-  background-image: linear-gradient(231deg, #8BC6EC 0%, #9599E2 100%);
+  background-image: linear-gradient(231deg, #E3F2FD 0%, #FFFFFF 100%);
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,7 +101,7 @@ body {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -464,6 +464,14 @@ body {
   }
 }
 
+.cen-div{
+  background-color: #D6EAF8;
+}
+
+.main-content .list-group-item {
+  background-color: #AED6F1 !important; /* Adjust color as needed */
+  color: #212529; /* Text color */
+}
 
 /* Dark Theme Styles */
 .dark-theme .theme {
@@ -473,7 +481,7 @@ body {
 }
 
 
-.dark-theme .bg-white {
+.dark-theme .cen-div {
   background-color: #333 !important;
 }
 
@@ -486,7 +494,7 @@ body {
   background-color: #0056b3 !important;
 }
 
-.dark-theme .modal-content {
+.dark-theme .modal-content .cen-div{
   background-color: #444 !important;
   color: #fff !important;
 }
@@ -511,3 +519,11 @@ body {
   color: black;
   border-color:#007bff;
 }
+#logout-btn{
+  padding: 7px 35px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+
+

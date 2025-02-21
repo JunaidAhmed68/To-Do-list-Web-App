@@ -20,7 +20,7 @@
 
     <span class="todoTitle">
       <h2 class="text-center" style="font-family: 'Dancing Script', cursive; color: #3e95f2;">To-Do list <svg
-          xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512" width="50" height="50">
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="50" height="50">
           <path fill="#6ef514" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 
           12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 
           45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
@@ -46,10 +46,8 @@
       <span id="msg-text"></span>
     </div>
 
-    <div class="container shadow p-4 rounded bg-white theme" style="max-width: 500px; margin-top:40px">
-
-
-      <div class="input-group mb-1">
+    <div class="container shadow p-4 rounded cen-div theme" style="max-width: 500px; margin-top:40px">
+      <div class="input-group mb-1 cen-div">
         <input type="text" id="taskInput" class="form-control" placeholder="Add a new task...">
         <button class="btn btn-primary" id="addTask">+ Add</button>
       </div>
@@ -57,7 +55,7 @@
 
     <!-- Modal Structure -->
     <div id="myModal" class="modal" style="display: none; align-items: center; justify-content: center;">
-      <div class="modal-content">
+      <div class="modal-content  cen-div">
         <span id="cancelBtn" class="close-btn">&times;</span>
         <h2>Edit Post</h2>
         <label for="editPostText">Edit your post text:</label>
@@ -68,15 +66,15 @@
 
     <!-- Modal profile information -->
     <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true"
-      style=" display:none; ">
+      style=" display:none; padding: 0px;">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="padding: 10px;">
           <div class="modal-header">
             <h5 class="modal-title" id="profileModalLabel">Profile Information</h5>
             <button type="button" class="btn-close" id="closeProfileModal" data-bs-dismiss="modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body cen-div">
             <img src="" alt="Profile" class="rounded-circle" width="100" height="100" id="modal-profile-pic">
             <p><strong>Name:</strong> <span id="user-name"></span></p>
             <p><strong>Email:</strong> <span id="user-email"></span></p>
@@ -92,19 +90,19 @@
 
     <!-- Delete Confirmation Modal -->
     <div id="deleteModal" class="modal" style="display: none;">
-      <div class="modal-content">
-        <span class="close" id="closeDeleteModal">&times;</span>
+      <div class="modal-content cen-div">
+        <span class="close" id="closeDeleteModal" style="color:red">&times;</span>
         <h2>Delete Task</h2>
         <p id="deleteCnfmText">Are you sure you want to delete this task?</p>
         <div class="modal-buttons">
-          <button id="cancelDeleteBtn" class="btn btn-secondary">Cancel</button>
+          <button id="cancelDeleteBtn" class="btn btn-secondary" >Cancel</button>
           <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
         </div>
       </div>
     </div>
 
 
-    <div class="container mt-3 shadow p-4 rounded bg-white" style="max-width: 500px;">
+    <div class="container mt-3 shadow p-4 rounded cen-div" style="max-width: 500px;">
       <h4 class="fw-bold text-center">Tasks</h4>
       <div class="text-end mb-3"> <!-- Aligns the button to the right -->
         <button id="deleteAllTasksBtn" class="btn btn-danger" style="display:none;">Delete All Tasks</button>
@@ -121,3 +119,4 @@
 </body>
 
 </html>
+<img src="./Form/form.html" alt="">

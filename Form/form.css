@@ -1,4 +1,4 @@
-/* Body or main-container background gradient */
+/* Body background gradient */
 body {
   background-image: linear-gradient(231deg, #8BC6EC 0%, #9599E2 100%);
   height: 100vh;
@@ -8,36 +8,35 @@ body {
   align-items: center;
 }
 
-/* Main container with initial invisible state */
+/* Main container fade-in effect */
 .main-container {
   opacity: 0;
-  transform: translateY(20px); /* You can adjust the Y-axis if you want it to slide */
+  transform: translateY(20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* Once the page is loaded, the form will fade and slide in */
 body.loaded .main-container {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Optional - Button hover effect */
+/* Button hover effect */
 button:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
+/* Login Page Styling */
 #login-page {
   background-color: #736060;
   height: 100vh;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Form Styling */
 form {
-  position: relative;
   background-color: rgba(255, 255, 255, 0.469);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -46,74 +45,66 @@ form {
   max-width: 400px;
 }
 
+/* Input Container */
 .input-container {
   position: relative;
 }
 
-.input-icon {
+.input-icon, .eye-icon {
   position: absolute;
-  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
   color: #6c757d;
+}
+
+.input-icon {
+  left: 10px;
 }
 
 .eye-icon {
-  position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
-  font-size: 18px;
-  color: #6c757d;
 }
 
-/* Default Input Styling */
+/* Input Field Styling */
 input.form-control {
   border: none;
   border-bottom: 2px solid #ccc;
-  border-radius: 0;
-  box-shadow: none;
-  padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+  padding-left: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
 }
 
 input.form-control::placeholder {
-  color: rgba(150, 150, 150, 0.7); /* Light Gray */
+  color: rgba(150, 150, 150, 0.7);
   font-weight: lighter;
-
 }
 
-/* Placeholder Fade Effect on Focus */
 input.form-control:focus::placeholder {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Focus (Active) Effect - Google-like */
 input.form-control:focus {
-  border-bottom-color: #0d6efd; /* Google Blue */
+  border-bottom-color: #0d6efd;
   outline: none;
-  box-shadow: 0 2px 4px rgba(13, 110, 253, 0.2); /* Soft glow effect */
+  box-shadow: 0 2px 4px rgba(13, 110, 253, 0.2);
 }
 
-/* Hover Effect */
 input.form-control:hover {
-  border-bottom-color: #5a9bff; /* Slightly lighter blue */
+  border-bottom-color: #5a9bff;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Active (Clicked) Effect */
 input.form-control:active {
-  border-bottom-color: #0b5ed7; /* Darker blue */
-  transform: scale(1.02); /* Slight pop effect */
+  border-bottom-color: #0b5ed7;
+  transform: scale(1.02);
 }
 
-
+/* Divider Styling */
 .or-divider {
   display: flex;
   align-items: center;
@@ -134,6 +125,7 @@ input.form-control:active {
   font-weight: 500;
 }
 
+/* Google Signup Button */
 #google-signUp {
   display: flex;
   align-items: center;
@@ -146,9 +138,8 @@ input.form-control:active {
   border-radius: 5px;
   background-color: white;
   color: #4285F4;
-  border: 1px solid #4285F4; 
+  border: 1px solid #4285F4;
 }
-
 
 #google-signUp img {
   height: 20px;
@@ -159,12 +150,13 @@ input.form-control:active {
   color: white;
 }
 
-/* Active Effect (When Clicked) */
 #google-signUp:active {
-  background-color: #0c4db8; /* Slightly darker blue */
+  background-color: #0c4db8;
   border-color: #0c4db8;
-  transform: scale(0.98); /* Subtle press effect */
+  transform: scale(0.98);
 }
+
+/* Toggle Link Styling */
 .toggle-link {
   color: #1877f2;
   cursor: pointer;
@@ -172,62 +164,16 @@ input.form-control:active {
   margin-top: 10px;
 }
 
-/* Hover Effect */
 .toggle-link:hover {
-  color: #084298; /* Darker blue */
+  color: #084298;
 }
 
-/* Active (Clicked) Effect */
 .toggle-link:active {
-  color: #052c65; /* Even darker blue */
-  transform: scale(0.98); /* Slight press effect */
+  color: #052c65;
+  transform: scale(0.98);
 }
 
-/* Style the message modal */
-.msg-modal {
-  position: fixed;
-  top: 10px;  /* Adjust this to control where on the page the modal appears */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4CAF50;  /* Green background for success messages */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  display: none;  /* Initially hide the modal */
-  z-index: 9999;
-}
-
-/* Optional: Add a transition effect to fade the modal in/out */
-.msg-modal.fade {
-  animation: fadeInOut 3s ease-in-out forwards;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
-  }
-  25% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  75% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px);
-  }
-}
-.error-text {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-/* Style the message modal */
+/* Message Modal Styling */
 .msg-modal {
   position: fixed;
   top: 10px;
@@ -242,10 +188,10 @@ input.form-control:active {
   z-index: 9999;
 }
 
-/* Fade-in/out animation for message modal */
 .msg-modal.fade {
   animation: fadeInOut 3s ease-in-out forwards;
 }
+
 @keyframes fadeInOut {
   0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
   25% { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -253,15 +199,20 @@ input.form-control:active {
   100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
 }
 
+/* Error Text Styling */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 
+/* To-Do Title Icon */
 .todoTitle svg {
   width: 40px;
   height: 40px;
   fill: #6ef514;
   vertical-align: middle;
-  /* Align the icon with the text */
   margin-left: 10px;
-  /* Space between text and icon */
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease-in-out;
 }
